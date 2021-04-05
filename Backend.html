@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 9px 18px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="index.html">Overview</a></li>
+  <li><a href="gettingstarted.html">Getting Started</a></li>
+  <li><a href="Running.html">Running</a></li>
+  <li><a href="Backend.html">Backend</a></li>
+  <li><a href="Youtube.html">Youtube</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+</ul>
+<title>Backend</title>
+<h1>Backend</h1>
+<p>In this section, we go over what we need in the Backend to make our calendar run.<br>
+We will not be going into fine detail about how to write the code, can refer to our <a href="https://github.com/Aswathysasi712/project2">Github</a> for necessary code. </p>
+
+<p>
+Our Calendar stores events in an MySQL table, have to set up the MySQL to store the information. <br>
+To create the table to store events, run <a href="https://pastebin.com/3pzpHnWz">this sql script</a>. <br>
+Also make sure to go into the pom.xml to add in a dependency for MySQL.
+</p>
+
+<p>
+MySQL is an open-source relational database management system. We used MySql as the backend to save the appointments created. <br>
+It uses plain Spring JDBC to access the database, but this is only one of many possible choices. We have created database named ‘event’ to store appointment details. <br>
+</p>
+Connecting to MySQL database in our application.properties file:<br>
+<img src="DatabaseConnection.JPG" width="900"> <br><br>
+
+Add MySQL dependencies to the pom.xml file:<br>
+<img src="Dependency.JPG" width="900"> <br><br>
+
+Table "event" is created in the "event database". Schema definition is shown below:<br>
+<img src="EventTable.JPG" width="900"> <br><br>
+
+Run as Spring Boot App, this is console readout:<br>
+<img src="console.JPG" width="900"> <br><br>
+
+Calendar Main page:<br>
+<img src="MainPage.JPG" width="900"> <br><br>
+
+Creating new Appointment:<br>
+<img src="CreateAppointment.JPG" width="900"> <br><br>
+
+Week View:<br>
+<img src="WeekView.JPG" width="900"> <br><br>
+</body>
+
+New Appointment in Table:<br>
+<img src="AppointmentInDatabase.JPG" width="900"> <br><br>
+</body>
+</html>
