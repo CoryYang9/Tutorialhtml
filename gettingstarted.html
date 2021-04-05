@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 9px 18px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="index.html">Overview</a></li>
+  <li><a href="gettingstarted.html">Getting Started</a></li>
+  <li><a href="Running.html">Running</a></li>
+  <li><a href="Youtube.html">Youtube</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+</ul>
+<title>Getting Started</title>
+<h1>Getting Started</h1>
+<p>The quickest way to get started with Spring is to use Spring Boot.</p>
+<p>This section provides a tutorial of how to use Spring Boot Initializr and run it from command line <br>
+You can skip to the next section if you want to Use Spring Boot in Java Eclipse EE. You can still import a project generated using the Initializr to Eclipse EE.</p>
+<p>This <a href="https://spring.io/quickstart">link</a><a href="bibliography.html#2"><sup>2</sup></a> gives a basic overview on how to do a quick Hello World Program. </p>
+<p>The tutorial provided shows how to run a Spring Boot project in Command Line. </p>
+<p><a href="https://start.spring.io/">Spring Boot Initializr</a><a href="bibliography.html#3"><sup>3</sup></a> allows you to generate a Spring Boot Project with your desired version, language, dependencies. </p>
+<img src="SpringInitialzr.jpg" width="750">
+<p>After generating the Spring Boot Project, you can run it after making some small changes. Refer to the links provided for more details.</p>
+<br>
+
+<h1>Spring Tools For Eclipse IDE</h1>
+<p>An alternative is to use Java Eclipse EE, which we should all have installed for this class.</p>
+<p>It is important to do this in Eclipse EE and not a different version of Eclipse, some features are only available to Eclipse EE.</p>
+<p>There is a Spring Tools Suite in the Eclipse EE Marketplace. Downloading "Spring Tools" allows us to generate and run Spring Boot Projects from our IDE.</p>
+<p>This <a href="https://www.eclipse.org/community/eclipse_newsletter/2018/february/springboot.php">link</a><a href="bibliography.html#4"><sup>4</sup></a> provides an overview of Spring Tools and how it works.</p>
+<img src="SpringTools.jpg" width="750">
+<p>After downloading Spring Tools and restarting, you can now create a Spring Boot Project.</p>
+<p>A Spring Boot Project created here should be virtually identical to one created in Spring Boot Initialzr provided you select the same options/dependencies.</p>
+<p>To create a Spring Boot Project in Eclipse EE Click File->New->Other->Spring Starter Project</p>
+<img src="SpringStarter.jpg" width="400">
+<p>The most important part here are the dependencies. Your own Spring Project may require different dependencies than ours. <br>
+But to create our Calendar, we used the ones shown here.
+Spring Data JPA allows persistence of data if you close a webpage but keep the server running, its a Java Persistence API. <br>
+HyperSQL is a built in SQL database for Spring, similar to how Ruby on Rails had a built in MySQL. <br>
+Thymeleaf is a template engine for HTML, we need this to display HTML pages.
+Spring Web is needed to make a Web app.
+</p>
+<img src="SpringDependencies.jpg" width="400">
+<p>Upon Creating your project, it may take some time for Eclipse to set up all the dependencies and generate the necessary files.<br>
+When it is all finished, your directory should look something like this:</p>
+<img src="SpringFolders.jpg" width="250">
+</body>
+</html>

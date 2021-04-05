@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 9px 18px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="index.html">Overview</a></li>
+  <li><a href="gettingstarted.html">Getting Started</a></li>
+  <li><a href="Running.html">Running</a></li>
+  <li><a href="Youtube.html">Youtube</a></li>
+  <li><a href="bibliography.html">Bibliography</a></li>
+</ul>
+<title>Running</title>
+<h1>Running</h1>
+<img src="SpringFolders.jpg" width="250">
+<p>The things here to pay attention to are the templates folder, application.properties, and pom.xml </p>
+<p>The templates folder is where we put our html files like our /index, /hello, etc.<br>
+You may notice that the .java file is highlighted, theres no real need to edit it. However the "Getting Started" section has a tutorial that creates a "Hello World" by editing this file. <br>
+application.properties does not hold much now, but if you want to integrate a database some work will go into that. Think of this file as holding environment variables. <br>
+The pom.xml file holds all the dependencies you checked when creating the Spring Boot Program. It is extremely messy, but you can manually change/add/remove dependencies here.
+</p>
+<p>This is what a basic pom.xml file looks like.</p>
+<img src="pomfile.jpg" width="500">
+<p>Now you can add a basic html file like index.html to the template folders.<br>
+You can copy/paste a basic index.html from <a href="https://pastebin.com/1wruhFXA">here</a><br>
+It is important to include the Doctype and xmlns lines as they link the dependency thymeleaf to generate the index.</p>
+
+<p>Now right click on the project, Run As -> Spring Boot App. And a Server should start up on localhost:8080</p>
+<img src="Starting.jpg" width="1000">
+<p>Go to localhost:8080 and it will show the index you just created.</p>
+<img src="testpic.jpg" width="250">
+
+</body>
+</html>
